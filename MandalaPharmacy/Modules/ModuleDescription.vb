@@ -6,7 +6,7 @@ Module ModuleDescription
     Public crypt As New CryptText("MandalaPharmacy")
     Public rConfig As New ReadConfig
     Public aUser As New ClassActiveUser
-
+    Public oReceive As New ClassReceive
     Public sqlCnn As SqlConnection
     Public sqlCmd As SqlCommand
     Public sqlDta As SqlDataAdapter

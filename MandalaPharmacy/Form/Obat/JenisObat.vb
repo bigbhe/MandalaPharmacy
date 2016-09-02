@@ -1,5 +1,5 @@
 ﻿Public Class JenisObat
-    Private Sub JenisObatBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs) Handles MyBaseBindingNavigatorSaveItem.Click, MyBaseBindingNavigatorSaveItem.Click, MyBaseBindingNavigatorSaveItem.Click
+    Private Sub JenisObatBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs) Handles JenisObatBindingNavigatorSaveItem.Click
         Me.Validate()
         Me.JenisObatBindingSource.EndEdit()
         Me.TableAdapterManager.UpdateAll(Me.DataSetObat)

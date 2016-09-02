@@ -44,10 +44,15 @@
         Me.menuSatuanObat = New DevExpress.XtraBars.BarButtonItem()
         Me.menuDaftarObat = New DevExpress.XtraBars.BarButtonItem()
         Me.RibbonGalleryBarItem1 = New DevExpress.XtraBars.RibbonGalleryBarItem()
+        Me.menuSupplier = New DevExpress.XtraBars.BarButtonItem()
+        Me.menuReceive = New DevExpress.XtraBars.BarButtonItem()
         Me.ribbonPage1 = New DevExpress.XtraBars.Ribbon.RibbonPage()
         Me.ribbonPageGroup1 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
+        Me.RibbonPageGroup5 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.RibbonPageGroup3 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.RibbonPageGroup4 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
+        Me.RibbonPage2 = New DevExpress.XtraBars.Ribbon.RibbonPage()
+        Me.RibbonPageGroup6 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.rpSettings = New DevExpress.XtraBars.Ribbon.RibbonPage()
         Me.RibbonPageGroup2 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.RepositoryItemTextEdit1 = New DevExpress.XtraEditors.Repository.RepositoryItemTextEdit()
@@ -64,11 +69,11 @@
         '
         Me.ribbonControl1.Controller = Me.BarAndDockingController1
         Me.ribbonControl1.ExpandCollapseItem.Id = 0
-        Me.ribbonControl1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.ribbonControl1.ExpandCollapseItem, Me.SkinRibbonGalleryBarItem1, Me.labelDateTime, Me.BarDockingMenuItem1, Me.labelFullName, Me.menuUser, Me.menuChangePassword, Me.menuJabatan, Me.menuKaryawan, Me.menuMapping, Me.menuJenisObat, Me.menuSatuanObat, Me.menuDaftarObat, Me.RibbonGalleryBarItem1})
+        Me.ribbonControl1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.ribbonControl1.ExpandCollapseItem, Me.SkinRibbonGalleryBarItem1, Me.labelDateTime, Me.BarDockingMenuItem1, Me.labelFullName, Me.menuUser, Me.menuChangePassword, Me.menuJabatan, Me.menuKaryawan, Me.menuMapping, Me.menuJenisObat, Me.menuSatuanObat, Me.menuDaftarObat, Me.RibbonGalleryBarItem1, Me.menuSupplier, Me.menuReceive})
         Me.ribbonControl1.Location = New System.Drawing.Point(0, 0)
-        Me.ribbonControl1.MaxItemId = 13
+        Me.ribbonControl1.MaxItemId = 15
         Me.ribbonControl1.Name = "ribbonControl1"
-        Me.ribbonControl1.Pages.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPage() {Me.ribbonPage1, Me.rpSettings})
+        Me.ribbonControl1.Pages.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPage() {Me.ribbonPage1, Me.RibbonPage2, Me.rpSettings})
         Me.ribbonControl1.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemTextEdit1})
         Me.ribbonControl1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2010
         Me.ribbonControl1.Size = New System.Drawing.Size(758, 146)
@@ -192,9 +197,25 @@
         Me.RibbonGalleryBarItem1.Id = 12
         Me.RibbonGalleryBarItem1.Name = "RibbonGalleryBarItem1"
         '
+        'menuSupplier
+        '
+        Me.menuSupplier.Caption = "Supplier"
+        Me.menuSupplier.Glyph = Global.MandalaPharmacy.My.Resources.Resources.shopping_cart
+        Me.menuSupplier.Id = 13
+        Me.menuSupplier.Name = "menuSupplier"
+        Me.menuSupplier.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
+        '
+        'menuReceive
+        '
+        Me.menuReceive.Caption = "Terima Barang"
+        Me.menuReceive.Glyph = Global.MandalaPharmacy.My.Resources.Resources.hospital_supplies
+        Me.menuReceive.Id = 14
+        Me.menuReceive.Name = "menuReceive"
+        Me.menuReceive.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
+        '
         'ribbonPage1
         '
-        Me.ribbonPage1.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.ribbonPageGroup1, Me.RibbonPageGroup3, Me.RibbonPageGroup4})
+        Me.ribbonPage1.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.ribbonPageGroup1, Me.RibbonPageGroup5, Me.RibbonPageGroup3, Me.RibbonPageGroup4})
         Me.ribbonPage1.KeyTip = "R"
         Me.ribbonPage1.Name = "ribbonPage1"
         Me.ribbonPage1.Text = "Data"
@@ -205,6 +226,13 @@
         Me.ribbonPageGroup1.ItemLinks.Add(Me.menuChangePassword)
         Me.ribbonPageGroup1.Name = "ribbonPageGroup1"
         Me.ribbonPageGroup1.Text = "User"
+        '
+        'RibbonPageGroup5
+        '
+        Me.RibbonPageGroup5.AllowTextClipping = False
+        Me.RibbonPageGroup5.ItemLinks.Add(Me.menuSupplier)
+        Me.RibbonPageGroup5.Name = "RibbonPageGroup5"
+        Me.RibbonPageGroup5.Text = "Supplier"
         '
         'RibbonPageGroup3
         '
@@ -221,6 +249,19 @@
         Me.RibbonPageGroup4.ItemLinks.Add(Me.menuDaftarObat)
         Me.RibbonPageGroup4.Name = "RibbonPageGroup4"
         Me.RibbonPageGroup4.Text = "Medicine"
+        '
+        'RibbonPage2
+        '
+        Me.RibbonPage2.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.RibbonPageGroup6})
+        Me.RibbonPage2.Name = "RibbonPage2"
+        Me.RibbonPage2.Text = "Activity"
+        '
+        'RibbonPageGroup6
+        '
+        Me.RibbonPageGroup6.AllowTextClipping = False
+        Me.RibbonPageGroup6.ItemLinks.Add(Me.menuReceive)
+        Me.RibbonPageGroup6.Name = "RibbonPageGroup6"
+        Me.RibbonPageGroup6.Text = "Terima"
         '
         'rpSettings
         '
@@ -309,4 +350,9 @@
     Friend WithEvents menuDaftarObat As XtraBars.BarButtonItem
     Friend WithEvents RibbonPageGroup4 As XtraBars.Ribbon.RibbonPageGroup
     Friend WithEvents RibbonGalleryBarItem1 As XtraBars.RibbonGalleryBarItem
+    Friend WithEvents menuSupplier As XtraBars.BarButtonItem
+    Friend WithEvents RibbonPageGroup5 As XtraBars.Ribbon.RibbonPageGroup
+    Friend WithEvents menuReceive As XtraBars.BarButtonItem
+    Friend WithEvents RibbonPage2 As XtraBars.Ribbon.RibbonPage
+    Friend WithEvents RibbonPageGroup6 As XtraBars.Ribbon.RibbonPageGroup
 End Class

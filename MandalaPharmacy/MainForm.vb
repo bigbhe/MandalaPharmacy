@@ -71,4 +71,35 @@ Partial Public Class MainForm
             JenisObat.Show()
         End If
     End Sub
+
+    Private Sub menuSatuanObat_ItemClick(sender As Object, e As XtraBars.ItemClickEventArgs) Handles menuSatuanObat.ItemClick
+        FormSatuanObat.ShowDialog()
+    End Sub
+
+    Private Sub menuDaftarObat_ItemClick(sender As Object, e As XtraBars.ItemClickEventArgs) Handles menuDaftarObat.ItemClick
+        If Me.MdiChildren.Contains(FormObat) Then
+            FormObat.Focus()
+        Else
+            FormObat.MdiParent = Me
+            FormObat.Show()
+        End If
+    End Sub
+
+    Private Sub menuSupplier_ItemClick(sender As Object, e As XtraBars.ItemClickEventArgs) Handles menuSupplier.ItemClick
+        If Me.MdiChildren.Contains(FormSupplier) Then
+            FormSupplier.Focus()
+        Else
+            FormSupplier.MdiParent = Me
+            FormSupplier.Show()
+        End If
+    End Sub
+
+    Private Sub menuReceive_ItemClick(sender As Object, e As XtraBars.ItemClickEventArgs) Handles menuReceive.ItemClick
+        If Me.MdiChildren.Contains(FormReceive) Then
+            FormReceive.Focus()
+        Else
+            FormReceive.MdiParent = Me
+            FormReceive.Show()
+        End If
+    End Sub
 End Class

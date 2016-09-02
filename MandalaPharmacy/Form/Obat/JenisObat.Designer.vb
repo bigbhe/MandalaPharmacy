@@ -298,7 +298,7 @@ Partial Class JenisObat
         Me.GambarPictureEdit.Name = "GambarPictureEdit"
         Me.GambarPictureEdit.Properties.PictureStoreMode = DevExpress.XtraEditors.Controls.PictureStoreMode.ByteArray
         Me.GambarPictureEdit.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.[Auto]
-        Me.GambarPictureEdit.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze
+        Me.GambarPictureEdit.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch
         Me.GambarPictureEdit.Properties.ZoomAccelerationFactor = 1.0R
         Me.GambarPictureEdit.Size = New System.Drawing.Size(207, 140)
         Me.GambarPictureEdit.StyleController = Me.DataLayoutControl1

@@ -101,6 +101,7 @@
     </Compile>
     <Compile Include="ApplicationEvents.vb" />
     <Compile Include="Class\ClassActiveUser.vb" />
+    <Compile Include="Class\ClassReceive.vb" />
     <Compile Include="Class\CryptText.vb" />
     <Compile Include="Class\ReadConfig.vb" />
     <Compile Include="Dataset\DataSetEmployee.Designer.vb">
@@ -113,6 +114,19 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetObat.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Dataset\DataSetReceive.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetReceive.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\DataSetReceive.vb">
+      <DependentUpon>DataSetReceive.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\DataSetSupplier.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetSupplier.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Dataset\DataSetUser1.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -124,10 +138,40 @@
     <Compile Include="Form\Employee\FormMappingKaryawanJabatan.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Form\FormSupplier.Designer.vb">
+      <DependentUpon>FormSupplier.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormSupplier.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Obat\FormObat.Designer.vb">
+      <DependentUpon>FormObat.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Obat\FormObat.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Obat\FormSatuanObat.Designer.vb">
+      <DependentUpon>FormSatuanObat.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Obat\FormSatuanObat.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form\Obat\JenisObat.Designer.vb">
       <DependentUpon>JenisObat.vb</DependentUpon>
     </Compile>
     <Compile Include="Form\Obat\JenisObat.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Receive\FormReceive.Designer.vb">
+      <DependentUpon>FormReceive.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Receive\FormReceive.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Receive\FormReceiveDetail.Designer.vb">
+      <DependentUpon>FormReceiveDetail.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Receive\FormReceiveDetail.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form\User\FormChangePassword.Designer.vb">
@@ -181,8 +225,23 @@
     <EmbeddedResource Include="Form\Employee\FormMappingKaryawanJabatan.resx">
       <DependentUpon>FormMappingKaryawanJabatan.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormSupplier.resx">
+      <DependentUpon>FormSupplier.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Obat\FormObat.resx">
+      <DependentUpon>FormObat.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Obat\FormSatuanObat.resx">
+      <DependentUpon>FormSatuanObat.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\Obat\JenisObat.resx">
       <DependentUpon>JenisObat.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Receive\FormReceive.resx">
+      <DependentUpon>FormReceive.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Receive\FormReceiveDetail.resx">
+      <DependentUpon>FormReceiveDetail.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\User\FormChangePassword.resx">
       <DependentUpon>FormChangePassword.vb</DependentUpon>
@@ -237,6 +296,28 @@
     <None Include="Dataset\DataSetObat.xss">
       <DependentUpon>DataSetObat.xsd</DependentUpon>
     </None>
+    <None Include="Dataset\DataSetReceive.xsc">
+      <DependentUpon>DataSetReceive.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\DataSetReceive.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetReceive.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Dataset\DataSetReceive.xss">
+      <DependentUpon>DataSetReceive.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\DataSetSupplier.xsc">
+      <DependentUpon>DataSetSupplier.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\DataSetSupplier.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetSupplier.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Dataset\DataSetSupplier.xss">
+      <DependentUpon>DataSetSupplier.xsd</DependentUpon>
+    </None>
     <None Include="Dataset\DataSetUser.xsc">
       <DependentUpon>DataSetUser.xsd</DependentUpon>
     </None>
@@ -277,6 +358,9 @@
     <None Include="Resources\emergency-kit.png" />
     <None Include="Resources\medicine.png" />
     <None Include="Resources\speedometer.png" />
+    <None Include="Resources\shopping-cart.png" />
+    <None Include="Resources\hospital-supplies.png" />
+    <None Include="Resources\note.png" />
     <Content Include="Settings\config.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
